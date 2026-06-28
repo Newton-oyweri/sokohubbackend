@@ -72,6 +72,11 @@ const generateToken = async (req, res, next) => {
     }
 };
 
+// home page
+ app.get('/', (req, res) => {
+    res.send('Welcome to Wonderbakes Payment Gateway API');
+});
+
 /**
  * Route: Initiates Lipa na M-Pesa STK Push
  * Expects JSON payload: { "userId": "UUID-HERE", "amount": 100, "phone": "254792625043" }
